@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.datetimepicker.css">
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery.datetimepicker.full.min.js" type="text/javascript"></script>
+	<script src="js/common.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="menu">
+			<a href="#" title="" class="menu__item menu__item_active">
+				<span>Главная</span>
+			</a>
+			<a href="#" title="" class="menu__item">
+				<span>Финансы</span>
+			</a>
+			<a href="#" title="" class="menu__item">
+				<span>Игроки</span>
+			</a>
+			<a href="#" title="" class="menu__item">
+				<span>Боты</span>
+			</a>
+			<a href="#" title="" class="menu__item">
+				<span>Служба поддержки</span>
+			</a>
+			<a href="#" title="" class="menu__item">
+				<span>Турниры</span>
+				<span class="show-more">+</span>
+			</a>
+		</div>
+		<section>
+			<div class="report report_finance">
+				<div class="report__item ">
+					<a href="#" class="report__button report__button_active report__button_left">Сегодня</a>
+					<a href="#" class="report__button">Вчера</a>
+					<a href="#" class="report__button">Неделя</a>
+					<a href="#" class="report__button">Месяц</a>
+					<a href="#" class="report__button">Квартал</a>
+					<a href="#" class="report__button report__button_right">Год</a>
+				</div>
+				<!-- <select class="report__select">
+					<option value="">27 октября 2015 — 28 октября 2015</option>
+					<option value="">27 октября 2015 — 28 октября 2015</option>
+					<option value="">27 октября 2015 — 28 октября 2015</option>
+					<option value="">27 октября 2015 — 28 октября 2015</option>					
+				</select> -->
+				<input type="text" pattern="[0-9]{2}.[0-9]{2}.[0-9]{2}" name="date-from" placeholder="" class="calendar-field report__date">
+				<input type="text" pattern="[0-9]{2}.[0-9]{2}.[0-9]{2}" name="date-to" placeholder="" class="calendar-field report__date">
+			</div>
+			<div class="subsections__block">
+				<div class="subsections__block-buttons">
+					<button class="subsections__block-button subsections__block-button_active">Все</button>
+					<button  class="subsections__block-button">Профиль</button>
+					<button disabled class="subsections__block-button subsections__block-button_disabled">Ввод платежей</button>
+					<button  class="subsections__block-button">Вывод платежей</button>
+					<button  class="subsections__block-button">Турниры</button>
+					<button disabled class="subsections__block-button subsections__block-button_disabled">Реф. сист.</button>
+					<button class="subsections__block-button subsections__block-button_new">Бонусы <span>1</span></button>
+					<button  class="subsections__block-button">Достижения</button>
+					<button  class="subsections__block-button">Тех. вопросы</button>
+					<button  class="subsections__block-button">Ответств. игра</button>
+				</div>
+				<div class="subsections__table">
+					<div class="subsections__table_thead">
+						<div class="subsections__table_row">
+							<div class="subsections__table_cell subsections__table_cell-1">Логин</div>
+							<div class="subsections__table_cell subsections__table_cell-2">Рейк $</div>
+							<div class="subsections__table_cell subsections__table_cell-3">Счет $</div>
+							<div class="subsections__table_cell subsections__table_cell-4">Ввод, $</div>
+							<div class="subsections__table_cell subsections__table_cell-5">Вывод, $</div>
+							<div class="subsections__table_cell subsections__table_cell-6">Игры</div>
+							<div class="subsections__table_cell">Регистрация</div>
+						</div>
+					</div>
+					<div class="subsections__table_tbody">
+						<div class="subsections__table_row">
+							<div class="subsections__table_cell subsections__table_cell-1 subsections__table_cell-name">Sylvia Foster</div>
+							<div class="subsections__table_cell subsections__table_cell-2 subsections__table_cell-bold color-2">300</div>
+							<div class="subsections__table_cell subsections__table_cell-3 subsections__table_cell-bold color-1">9 000</div>
+							<div class="subsections__table_cell subsections__table_cell-4 ">6 500</div>
+							<div class="subsections__table_cell subsections__table_cell-5 subsections__table_cell-bold color-3">1 500</div>
+							<div class="subsections__table_cell subsections__table_cell-6">195</div>
+							<div class="subsections__table_cell">01.03.2014</div>
+						</div>
+						<div class="subsections__table_row">
+							<div class="subsections__table_cell subsections__table_cell-1 subsections__table_cell-name">Tom Bishop</div>
+							<div class="subsections__table_cell subsections__table_cell-2 subsections__table_cell-bold color-2">280</div>
+							<div class="subsections__table_cell subsections__table_cell-3 subsections__table_cell-bold color-1">8 500</div>
+							<div class="subsections__table_cell subsections__table_cell-4 ">4 500</div>
+							<div class="subsections__table_cell subsections__table_cell-5 subsections__table_cell-bold color-3">2 500</div>
+							<div class="subsections__table_cell subsections__table_cell-6">180</div>
+							<div class="subsections__table_cell">03.012.2014</div>
+						</div>
+						<div class="subsections__table_row">
+							<div class="subsections__table_cell subsections__table_cell-1 subsections__table_cell-name">Christian Henry</div>
+							<div class="subsections__table_cell subsections__table_cell-2 subsections__table_cell-bold color-2">120</div>
+							<div class="subsections__table_cell subsections__table_cell-3 subsections__table_cell-bold color-1">1 460</div>
+							<div class="subsections__table_cell subsections__table_cell-4 ">10 500</div>
+							<div class="subsections__table_cell subsections__table_cell-5 subsections__table_cell-bold color-3">1 100</div>
+							<div class="subsections__table_cell subsections__table_cell-6">91</div>
+							<div class="subsections__table_cell">01.03.2014</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

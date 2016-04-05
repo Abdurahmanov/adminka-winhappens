@@ -209,6 +209,52 @@ section{
 	    &_border-4{
 	    	border-top: 6px solid #b0b0b0;
 	    }
+	    &-buttons{
+	    	
+	    }
+	    &-button{
+	    	width: 100px;
+		    height: 30px;
+		    display: inline-block;
+		    text-align: center;
+		    border-radius: 4px;
+		    color: #000;
+		    font-size: 12px;
+		    font-weight: 400;
+		    margin-right: 10px;
+		    margin-bottom: 10px;
+		    border: 1px solid rgba(155,155,155,.5);
+		    background: transparent;
+		    cursor: pointer;
+		    outline: none;
+		    padding: 0;
+		    position: relative;
+			&_active{
+				background-color: rgba(208, 2, 27, 0.1);
+			}
+			&_disabled{
+				color: rgba(74,74,74,0.3);
+				cursor: no-drop;
+			}
+			&_new{
+				background-color: rgba(73, 143, 225, 0.07);
+				& span{
+					position: absolute;
+				    right: -5px;
+				    display: block;
+				    height: 16px;
+				    width: 16px;
+				    top: -6px;
+				    background-color: #4a90e2;
+				    border-radius: 2px;
+				    text-align: center;
+				    line-height: 16px;
+				    color: white;
+				    font-size: 10px;
+				    font-weight: 700;
+				}
+			}
+	    }
 	}
 	&__text{
 	    font-size: 14px;
