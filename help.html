@@ -4,31 +4,33 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
+	<link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css ">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/jquery.datetimepicker.css">
 	<script src="js/jquery.js" type="text/javascript"></script>
 	<script src="js/jquery.datetimepicker.full.min.js" type="text/javascript"></script>
 	<script src="js/common.js" type="text/javascript"></script>
+	<script src="js/fancybox/source/jquery.fancybox.js"></script>
 </head>
 <body>
 	<div class="wrapper">
 		<div class="menu">
-			<a href="#" title="" class="menu__item menu__item_active">
+			<a href="main.html" title="" class="menu__item ">
 				<span>Главная</span>
 			</a>
-			<a href="#" title="" class="menu__item">
+			<a href="finance.html" title="" class="menu__item">
 				<span>Финансы</span>
 			</a>
-			<a href="#" title="" class="menu__item">
+			<a href="players.html" title="" class="menu__item ">
 				<span>Игроки</span>
 			</a>
-			<a href="#" title="" class="menu__item">
+			<a href="bots.html" title="" class="menu__item ">
 				<span>Боты</span>
 			</a>
-			<a href="#" title="" class="menu__item">
+			<a href="help.html" title="" class="menu__item menu__item_active">
 				<span>Служба поддержки</span>
 			</a>
-			<a href="#" title="" class="menu__item">
+			<a href="games-short.html" title="" class="menu__item ">
 				<span>Турниры</span>
 				<span class="show-more">+</span>
 			</a>
@@ -122,7 +124,7 @@
 					<tbody>
 						<tr>
 							<td>17:20</td>
-							<td>За что можно получить бонусы</td>
+							<td><a href="#help-modal" class="modalbox">За что можно получить бонусы</a></td>
 							<td>Новый</td>
 							<td>user1@mail.ru</td>
 							<td>01.10.2015</td>
@@ -148,6 +150,50 @@
 				</div>
 			</div>
 		</section>
+	</div>
+
+	<div id="help-modal" class="modal">
+		<a href="javascript:;" class="modal-close">Закрыть окно</a>
+		<span class="modal-help__date">01.10.2015 — 15:18</span>
+		<div class="modal-help__title">
+			<span class="modal-help__category">Бонусы ></span><span class="modal-help__category-message">За что можно получить бонусы</span>
+		</div>
+		<div class="modal-help__information">
+			<div class="modal-help__information-title">
+			Тема:
+			</div>
+			<div class="modal-help__information-description">
+			Не понятно куда пропали бонусы помогите
+			</div>
+		</div>
+		<div class="modal-help__information">
+			<div class="modal-help__information-title">
+			Миша Мавашин
+			</div>
+			<div class="modal-help__information-description">
+			mishama@mail.ru
+			</div>
+		</div>
+		<div class="modal__line"></div>
+		<div class="modal-help__problem">
+			<p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking that hard-scrabble scramble upon the dead whale's back.</p> 
+
+			<p>You have seen Italian organ-boys holding a dancing-ape by a long cord. Just so, from the ship's steep side, did I hold Queequeg down there in the sea, by what is technically called in the fishery a monkey-rope, attached to a strong strip of canvas belted round his waist.</p>
+		</div>
+		<div class="modal__line"></div>
+		<div class="modal-help__answer">
+			<div class="modal-help__answer-text">
+				<p>Dear Misha.</p>
+
+				<p>So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into unmerited disaster and death. Therefore, I saw that here was a sort of interregnum in Providence; for its even-handed equity never could have so gross an injustice. </p>
+
+				<p>And yet still further pondering—while I jerked him now and then from between the whale and ship, which would threaten to jam him—still further pondering, I say, I saw that this situation of mine was the precise situation of every mortal that breathes; only, in most cases, he, one way or other, has this Siamese connexion with a plurality of other mortals. </p>
+			</div>
+		</div>
+		<div class="modal__submit modal__submit_help">
+			<input type="submit" name="" value="Отправить ответ">
+			<a href="javascript:;" class="modal-close modal-close__help-tiket">Закрыть тикет</a>
+		</div>
 	</div>
 </body>
 </html>

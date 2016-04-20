@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.datetimepicker.css">
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery.datetimepicker.full.min.js" type="text/javascript"></script>
+	<script src="js/common.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="menu">
+			<a href="main.html" title="" class="menu__item ">
+				<span>Главная</span>
+			</a>
+			<a href="finance.html" title="" class="menu__item">
+				<span>Финансы</span>
+			</a>
+			<a href="players.html" title="" class="menu__item ">
+				<span>Игроки</span>
+			</a>
+			<a href="bots.html" title="" class="menu__item ">
+				<span>Боты</span>
+			</a>
+			<a href="help.html" title="" class="menu__item">
+				<span>Служба поддержки</span>
+			</a>
+			<a href="games-short.html" title="" class="menu__item menu__item_active">
+				<span>Турниры</span>
+				<span class="show-more">+</span>
+			</a>
+		</div>
+		<section>
+			<div class="breadcrumbs">
+				<a href="games-short.html" title="" class="breadcrumbs__button">Назад</a>
+				<span class="breadcrumbs__title">Турнир 1/100</span>
+				<div class="games-buttons">
+					<a href="#" class="games-buttons__item">Дублировать турнир</a>
+					<a href="#" class="games-buttons__item">Редактировать</a>
+					<a href="#" class="games-buttons__item games-buttons__item_delete">Удалить</a>
+				</div>
+			</div>
+			<div class="report report_finance">
+				<div class="report__item ">
+					<a href="#" class="report__button report__button_active report__button_left">Сегодня</a>
+					<a href="#" class="report__button">Вчера</a>
+					<a href="#" class="report__button">Неделя</a>
+					<a href="#" class="report__button">Месяц</a>
+					<a href="#" class="report__button">Квартал</a>
+					<a href="#" class="report__button report__button_right">Год</a>
+				</div>
+				<!-- <select class="report__select">
+					<option value="">27 октября 2015 — 28 октября 2015</option>
+					<option value="">27 октября 2015 — 28 октября 2015</option>
+					<option value="">27 октября 2015 — 28 октября 2015</option>
+					<option value="">27 октября 2015 — 28 октября 2015</option>					
+				</select> -->
+				<input type="text" pattern="[0-9]{2}.[0-9]{2}.[0-9]{2}" name="date-from" placeholder="" class="calendar-field report__date">
+				<input type="text" pattern="[0-9]{2}.[0-9]{2}.[0-9]{2}" name="date-to" placeholder="" class="calendar-field report__date">
+			</div>
+			<div class="subsections__block">
+				<div class="games-info">
+					<div class="games-info__number">
+						№ 43111
+					</div>
+					<div class="games-info__title">
+						Турнир — 10k / 100k
+					</div>
+					<div class="games-info__description">
+						<div class="games-info__description-title">
+							Начало:
+						</div>
+						<div class="games-info__description-text">
+							01.04.2015
+						</div>
+					</div>
+					<div class="games-info__description">
+						<div class="games-info__description-title">
+							Завершение:
+						</div>
+						<div class="games-info__description-text">
+							01.10.2015
+						</div>
+					</div>
+					<div class="games-info__description">
+						<div class="games-info__description-title">
+							Ставка, $: 
+						</div>
+						<div class="games-info__description-text">
+							 100  
+						</div>
+					</div>
+					<div class="games-info__description">
+						<div class="games-info__description-title">
+							Первый приз, $: 
+						</div>
+						<div class="games-info__description-text">
+							  500 
+						</div>
+					</div>
+					<div class="games-info__description">
+						<div class="games-info__description-title">
+							Второй приз, $: 
+						</div>
+						<div class="games-info__description-text">
+							  250
+						</div>
+					</div>
+				</div>
+				<div class="subsections__line"></div>
+				<div class="users-info__game-info_block">
+					<div class="users-info__game-info users-info__game-info-bots">
+						<div class="users-info__game-info_information ">Общий рейк, $</div>
+						<div class="users-info__game-info_description color-2">13 000</div>
+					</div>
+					<div class="users-info__game-info users-info__game-info-bots">
+						<div class="users-info__game-info_information">Общий оборот, $</div>
+						<div class="users-info__game-info_description color-1">230 000</div>
+					</div>
+					<div class="users-info__game-info users-info__game-info-bots">
+						<div class="users-info__game-info_information">Круги</div>
+						<div class="users-info__game-info_description ">130</div>
+					</div>
+					<div class="users-info__game-info users-info__game-info-bots">
+						<div class="users-info__game-info_information">Всего игроков</div>
+						<div class="users-info__game-info_description ">214</div>
+					</div>
+				</div>
+				<div class="subsections__line"></div>
+				<div class="report__item report__item_tables-players">
+					<a href="#" class="report__button report__button_active report__button_left" id="games__tables">Столы</a>
+					<a href="#" class="report__button report__button_right" id="games__players">Игроки</a>
+				</div>
+				<div class="report__search">
+						<input type="search" name="search" value="" placeholder="Поиск" class="report__search_input">
+						<button type="" class="report__search_button">Найти</button>
+					</div>
+				<div class="games-info__tables" id="games-info__tables">
+					<div class="games-info__tables-left">
+						<div class="games-info__description">
+							<div class="games-info__description-title">Просмотр круга</div>	
+						</div>
+						<div class="games-info__tables-left--number">
+							<a class="games-info__tables-left--number-item games-info__tables-left--number-item_active">1-100</a>
+							<a class="games-info__tables-left--number-item ">101-130</a>
+						</div>
+						<div class="games-info__tables-left--items">
+							<a href="#" class="games-info__tables-left--item games-info__tables-left--item_active">
+								1
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								2
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								3
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								4
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								5
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								6
+							</a>
+
+							<a href="#" class="games-info__tables-left--item ">
+								7
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								8
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								9
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								10
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								11
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								12
+							</a>
+
+							<a href="#"class="games-info__tables-left--item ">
+								13
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								14
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								15
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								16
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								17
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								18
+							</a>
+
+							<a href="#" class="games-info__tables-left--item ">
+								19
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								20
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								21
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								22
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								23
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								24
+							</a>
+
+							<a href="#" class="games-info__tables-left--item ">
+								25
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								26
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								27
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								28
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								29
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								30
+							</a>
+
+							<a href="#" class="games-info__tables-left--item ">
+								31
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								32
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								33
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								34
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								35
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								36
+							</a>
+
+							<a href="#" class="games-info__tables-left--item ">
+								37
+							</a>
+							<a href="#" class="games-info__tables-left--item  ">
+								38
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								39
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								40
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								41
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								42
+							</a>
+
+							<a href="#" class="games-info__tables-left--item ">
+								43
+							</a>
+							<a href="#" class="games-info__tables-left--item  ">
+								44
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								45
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								46
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								47
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								48
+							</a>
+
+							<a href="#" class="games-info__tables-left--item ">
+								49
+							</a>
+							<a href="#" class="games-info__tables-left--item  ">
+								50
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								51
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								52
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								53
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								54
+							</a>
+
+							<a href="#" class="games-info__tables-left--item ">
+								55
+							</a>
+							<a href="#" class="games-info__tables-left--item  ">
+								56
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								57
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								58
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								59
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								60
+							</a>
+							
+							<a href="#" class="games-info__tables-left--item ">
+								61
+							</a>
+							<a href="#" class="games-info__tables-left--item  ">
+								62
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								63
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								64
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								65
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								66
+							</a>
+
+							<a href="#" class="games-info__tables-left--item ">
+								67
+							</a>
+							<a href="#" class="games-info__tables-left--item  ">
+								68
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								69
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								70
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								71
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								72
+							</a>
+
+							<a href="#" class="games-info__tables-left--item ">
+								73
+							</a>
+							<a href="#" class="games-info__tables-left--item  ">
+								74
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								75
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								76
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								77
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								78
+							</a>
+
+							<a href="#" class="games-info__tables-left--item ">
+								79
+							</a>
+							<a href="#" class="games-info__tables-left--item  ">
+								80
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								81
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								82
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								83
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								84
+							</a>
+
+							<a href="#" class="games-info__tables-left--item ">
+								85
+							</a>
+							<a href="#" class="games-info__tables-left--item  ">
+								86
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								87
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								88
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								89
+							</a>
+							<a href="#" class="games-info__tables-left--item  ">
+								90
+							</a>
+
+							<a href="#" class="games-info__tables-left--item ">
+								91
+							</a>
+							<a href="#" class="games-info__tables-left--item  ">
+								92
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								93
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								94
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								95
+							</a>
+							<a href="#" class="games-info__tables-left--item  ">
+								96
+							</a>
+
+							<a href="#" class="games-info__tables-left--item ">
+								97
+							</a>
+							<a href="#" class="games-info__tables-left--item  ">
+								98
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								99
+							</a>
+							<a href="#" class="games-info__tables-left--item ">
+								100
+							</a>
+							
+						</div>
+					</div>
+					<div class="games-info__tables-right">
+						<div class="games-info__description games-info__description_table">
+							<div class="games-info__description-title games-info__description-title_table">Номер круга </div>	
+							<div class="games-info__description-text games-info__description-text_table games-info__description-text_table-arrow">
+								1
+							</div>
+						</div>
+						<div class="games-info__description games-info__description_table">
+							<div class="games-info__description-title games-info__description-title_table">Время розыгрыша </div>	
+							<div class="games-info__description-text games-info__description-text_table">
+								14:33
+							</div>
+						</div>
+						<div class="games-info__description games-info__description_table">
+							<div class="games-info__description-title games-info__description-title_table">Расчет </div>	
+							<div class="games-info__description-text games-info__description-text_table">
+								<span>1+2+3+4+5+1+2+3+4+5 = 3</span><span class="games-info__description-text_table-calculation">1</span>
+							</div>
+						</div>
+						<table>
+							<thead>
+								<tr>
+									<th>Игрок</th>
+									<th>Место</th>
+									<th>Число</th>
+									<th>$</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="background-3">
+									<td><a href="#" title="">Russell Silva</a></td>
+									<td>9</td>
+									<td>1</td>
+									<td>100</td>
+								</tr>
+								<tr class="background-4">
+									<td><a href="#" title="">Cameron Salazar</a></td>
+									<td>8</td>
+									<td>2</td>
+									<td>50</td>
+								</tr>
+								<tr class="background-4">
+									<td><a href="#" title="">Ivan Ross</a></td>
+									<td>0</td>
+									<td>3</td>
+									<td>50</td>
+								</tr>
+								<tr>
+									<td><a href="#" title="">Ronnie Munoz</a></td>
+									<td>4</td>
+									<td>4</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><a href="#" title="">Eric Drake</a></td>
+									<td>5</td>
+									<td>5</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><a href="#" title="">Christine Black</a></td>
+									<td>6</td>
+									<td>1</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><a href="#" title="">Clayton Bass</a></td>
+									<td>7</td>
+									<td>2</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><a href="#" title="">Robert Lambert</a></td>
+									<td>8</td>
+									<td>3</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><a href="#" title="">Ethan Stevens</a></td>
+									<td>9</td>
+									<td>4</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><a href="#" title="">Georgie McCoy</a></td>
+									<td>10</td>
+									<td>5</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="games-info__players" id="games-info__players">
+					<table>
+					<thead>
+						<tr>
+							<th>Игрок</th>
+							<th>Кругов</th>
+							<th>В / П</th>
+							<th> Сумма, $</th>
+							<th> Рейк, $</th>
+							<th> Сальдо, $</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr >
+							<td><a href="#" title="">Russell Silva</a></td>
+							<td>53 </td>
+							<td>40 / 13</td>
+							<td> 40 000</td>
+							<td class="color-2 bold">1 000</td>
+							<td> 34 700</td>
+						</tr>
+						<tr >
+							<td><a href="#" title="">Cameron Salazar</a></td>
+							<td>43  </td>
+							<td>12 / 31</td>
+							<td> 12 000</td>
+							<td class="color-2 bold">430</td>
+							<td> 7 700</td>
+						</tr>
+						<tr >
+							<td><a href="#" title="">Ivan Ross</a></td>
+							<td>43  </td>
+							<td>12 / 31</td>
+							<td> 12 000</td>
+							<td class="color-2 bold">430</td>
+							<td> 7 700</td>
+						</tr>
+						<tr >
+							<td><a href="#" title="">Ivan Ross</a></td>
+							<td>43  </td>
+							<td>12 / 31</td>
+							<td> 12 000</td>
+							<td class="color-2 bold">430</td>
+							<td> 7 700</td>
+						</tr>
+						<tr >
+							<td><a href="#" title="">Ivan Ross</a></td>
+							<td>43  </td>
+							<td>12 / 31</td>
+							<td> 12 000</td>
+							<td class="color-2 bold">430</td>
+							<td> 7 700</td>
+						</tr>
+						<tr >
+							<td><a href="#" title="">Ivan Ross</a></td>
+							<td>43  </td>
+							<td>12 / 31</td>
+							<td> 12 000</td>
+							<td class="color-2 bold">430</td>
+							<td> 7 700</td>
+						</tr>
+						<tr >
+							<td><a href="#" title="">Ivan Ross</a></td>
+							<td>43  </td>
+							<td>12 / 31</td>
+							<td> 12 000</td>
+							<td class="color-2 bold">430</td>
+							<td> 7 700</td>
+						</tr>
+						<tr >
+							<td><a href="#" title="">Ivan Ross</a></td>
+							<td>43  </td>
+							<td>12 / 31</td>
+							<td> 12 000</td>
+							<td class="color-2 bold">430</td>
+							<td> 7 700</td>
+						</tr>
+						<tr >
+							<td><a href="#" title="">Ivan Ross</a></td>
+							<td>43  </td>
+							<td>12 / 31</td>
+							<td> 12 000</td>
+							<td class="color-2 bold">430</td>
+							<td> 7 700</td>
+						</tr>
+						<tr >
+							<td><a href="#" title="">Ivan Ross</a></td>
+							<td>43  </td>
+							<td>12 / 31</td>
+							<td> 12 000</td>
+							<td class="color-2 bold">430</td>
+							<td> 7 700</td>
+						</tr>
+					</tbody>
+				</table>
+					<div class="button-block">
+						<a href="#" title="" class="subsections__button">Показать больше</a>
+					</div>
+					<div class="subsections__pagination">
+						<a href="#" class="subsections__pagination-item">1</a>
+						<a href="#" class="subsections__pagination-item">2</a>
+						<a href="#" class="subsections__pagination-item">3</a>
+						<a href="#" class="subsections__pagination-item">4</a>
+						<a href="#" class="subsections__pagination-item">5</a>
+						<a href="#" class="subsections__pagination-item">6</a>
+						<a href="#" class="subsections__pagination-item">7</a>
+						<a href="#" class="subsections__pagination-item">8</a>
+						<a href="#" class="subsections__pagination-item">9</a>
+						<a href="#" class="subsections__pagination-item">10</a>
+						<a href="#" class="subsections__pagination-item">58</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.datetimepicker.css">
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery.datetimepicker.full.min.js" type="text/javascript"></script>
+	<script src="js/common.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="menu">
+			<a href="main.html" title="" class="menu__item ">
+				<span>Главная</span>
+			</a>
+			<a href="finance.html" title="" class="menu__item">
+				<span>Финансы</span>
+			</a>
+			<a href="players.html" title="" class="menu__item">
+				<span>Игроки</span>
+			</a>
+			<a href="bots.html" title="" class="menu__item menu__item_active">
+				<span>Боты</span>
+			</a>
+			<a href="help.html" title="" class="menu__item">
+				<span>Служба поддержки</span>
+			</a>
+			<a href="games-short.html" title="" class="menu__item">
+				<span>Турниры</span>
+				<span class="show-more">+</span>
+			</a>
+		</div>
+		<section>
+			<div class="breadcrumbs">
+				<a href="bots.html" title="" class="breadcrumbs__button">Назад</a>
+				<span class="breadcrumbs__title">Профиль бота</span>
+			</div>
+			<div class="subsections__block">
+				<div class="users-info">
+					<div class="users-info__register">
+						<div class="users-info__photo">
+							<img src="img/another-photo.png" alt="">
+						</div>
+						<div class="users-info__register-info users-info__register-info-main">
+							<div class="users-info__register-info_mail">lesch.sammy@davis.biz</div>
+							<div class="users-info__register-info_name">George Holland</div>
+						</div>
+						<div class="users-info__register-info users-info__register-info-bots">
+							<div class="users-info__register-info_block">
+								<div class="users-info__register-info_informatiion users-info__register-info_informatiion_top">Регистрация:</div>
+								<div class="users-info__register-info_description">01.12.2014</div>
+							</div>
+							<div class="users-info__register-info_block">
+								<div class="users-info__register-info_informatiion users-info__register-info_informatiion_top">Статус</div>
+								<div class="users-info__register-info_description">Активен</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="subsections__line"></div>
+				<div class="users-info__game-info_block">
+					<div class="users-info__game-info users-info__game-info-bots">
+						<div class="users-info__game-info_information">Выйгрыш, $</div>
+						<div class="users-info__game-info_description ">4 500</div>
+					</div>
+					<div class="users-info__game-info users-info__game-info-bots">
+						<div class="users-info__game-info_information">Проигрыш, $</div>
+						<div class="users-info__game-info_description ">230 000</div>
+					</div>
+					<div class="users-info__game-info users-info__game-info-bots">
+						<div class="users-info__game-info_information">Сальдо, $</div>
+						<div class="users-info__game-info_description ">+ 12 000</div>
+					</div>
+					<div class="users-info__game-info users-info__game-info-bots">
+						<div class="users-info__game-info_information">Оборот, $</div>
+						<div class="users-info__game-info_description">460 000</div>
+					</div>
+				</div>
+				<div class="subsections__line"></div>
+				<div class="users-info__game-info_block">
+					<div class="users-info__game-info users-info__game-info-bots">
+						<div class="users-info__game-info_information">Все игры</div>
+						<div class="users-info__game-info_description ">1 640</div>
+					</div>
+					<div class="users-info__game-info users-info__game-info-bots">
+						<div class="users-info__game-info_information">Быстрые</div>
+						<div class="users-info__game-info_description ">1 200 / 150 </div>
+					</div>
+					<div class="users-info__game-info users-info__game-info-bots">
+						<div class="users-info__game-info_information">Долгие</div>
+						<div class="users-info__game-info_description ">140 / 3 </div>
+					</div>
+					<div class="users-info__game-info users-info__game-info-bots">
+						<div class="users-info__game-info_information">Бонусные</div>
+						<div class="users-info__game-info_description ">300 / 250 </div>
+					</div>
+				</div>
+				</div>
+				<div class="subsections__line subsections__line_between"></div>
+					<div class="report__item report__item_games">
+						<a href="#" class="report__button report__button_active report__button_left" id="games__fast">Быстрые</a>
+						<a href="#" class="report__button report__button_right" id="games__many">Долгие</a>
+					</div>			
+			<div class="report report_finance">
+				<div class="report__item ">
+					<a href="#" class="report__button report__button_active report__button_left">Сегодня</a>
+					<a href="#" class="report__button">Вчера</a>
+					<a href="#" class="report__button">Неделя</a>
+					<a href="#" class="report__button">Месяц</a>
+					<a href="#" class="report__button">Квартал</a>
+					<a href="#" class="report__button report__button_right">Год</a>
+				</div>
+				<!-- <select class="report__select">
+					<option value="">27 октября 2015 — 28 октября 2015</option>
+					<option value="">27 октября 2015 — 28 октября 2015</option>
+					<option value="">27 октября 2015 — 28 октября 2015</option>
+					<option value="">27 октября 2015 — 28 октября 2015</option>					
+				</select> -->
+				<input type="text" pattern="[0-9]{2}.[0-9]{2}.[0-9]{2}" name="date-from" placeholder="" class="calendar-field report__date">
+				<input type="text" pattern="[0-9]{2}.[0-9]{2}.[0-9]{2}" name="date-to" placeholder="" class="calendar-field report__date">
+			</div>
+			<div class="subsections__block" id="block__fast">
+				<div class="report__checkbox">
+					<div class="report__checkbox-block">
+						<div class="report__checkbox-item">
+							<input type="checkbox" name="" value="" id="onevsone">
+							<label for="onevsone">1 на 1</label>
+						</div>
+					</div>
+					<div class="report__checkbox-block">
+						<div class="report__checkbox-item">
+							<input type="checkbox" name="" value="" id="onethird">
+							<label for="onethird">1/10</label>
+						</div>
+						<div class="report__checkbox-item">
+							<input type="checkbox" name="" value="" id="threetenths">
+							<label for="threetenths">3/10</label>
+						</div>
+						<div class="report__checkbox-item">
+							<input type="checkbox" name="" value="" id="fivetenths">
+							<label for="fivetenths">5/10</label>
+						</div>
+					</div>
+					<div class="report__checkbox-block">
+						<div class="report__checkbox-item">
+							<input type="checkbox" name="" value="" id="tenhundredths">
+							<label for="tenhundredths">10/100</label>
+						</div>
+						<div class="report__checkbox-item">
+							<input type="checkbox" name="" value="" id="thirtyhundredths">
+							<label for="thirtyhundredths">30/100</label>
+						</div>
+						<div class="report__checkbox-item">
+							<input type="checkbox" name="" value="" id="fiftyhundredths">
+							<label for="fiftyhundredths">50/100</label>
+						</div>
+					</div>
+				</div>
+				<div class="report__search">
+					<input type="search" name="search" value="" placeholder="Поиск" class="report__search_input">
+					<button type="" class="report__search_button">Найти</button>
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th>Тип</th>
+							<th>№</th>
+							<th>Ставка $</th>
+							<th> Круги</th>
+							<th> В/П</th>
+							<th> Выйгрыш $</th>
+							<th> Проигрыш $</th>
+							<th> Сальдо $</th>
+							<th> Дата</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="background-1" onclick="window.location.href='bots-short-game.html'; return false" style="cursor: pointer;">
+							<td>10 / 100</td>
+							<td>49330</td>
+							<td>1</td>
+							<td>12</td>
+							<td>10 / 2</td>
+							<td  >12</td>
+							<td>120</td>
+							<td>100</td>
+							<td>09-03-2016</td>
+						</tr>
+						<tr class="background-2">
+							<td>10 / 100</td>
+							<td>43111</td>
+							<td>10</td>
+							<td>130</td>
+							<td>70 / 60</td>
+							<td >130</td>
+							<td>700</td>
+							<td>-100</td>
+							<td>09-03-2016</td>
+						</tr>
+						<tr class="background-2">
+							<td>10 / 100</td>
+							<td>49330</td>
+							<td>1</td>
+							<td>12</td>
+							<td>10 / 2</td>
+							<td  >12</td>
+							<td>120</td>
+							<td>-100</td>
+							<td>09-03-2016</td>
+						</tr>
+						<tr class="background-2">
+							<td>10 / 100</td>
+							<td>49330</td>
+							<td>1</td>
+							<td>12</td>
+							<td>10 / 2</td>
+							<td  >12</td>
+							<td>120</td>
+							<td>-100</td>
+							<td>09-03-2016</td>
+						</tr>
+						<tr class="background-1">
+							<td>10 / 100</td>
+							<td>49330</td>
+							<td>1</td>
+							<td>12</td>
+							<td>10 / 2</td>
+							<td  >12</td>
+							<td>120</td>
+							<td>100</td>
+							<td>09-03-2016</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="button-block">
+					<a href="#" title="" class="subsections__button">Показать больше</a>
+				</div>
+				<div class="subsections__pagination">
+					<a href="#" class="subsections__pagination-item">1</a>
+					<a href="#" class="subsections__pagination-item">2</a>
+					<a href="#" class="subsections__pagination-item">3</a>
+					<a href="#" class="subsections__pagination-item">4</a>
+					<a href="#" class="subsections__pagination-item">5</a>
+					<a href="#" class="subsections__pagination-item">6</a>
+					<a href="#" class="subsections__pagination-item">7</a>
+					<a href="#" class="subsections__pagination-item">8</a>
+					<a href="#" class="subsections__pagination-item">9</a>
+					<a href="#" class="subsections__pagination-item">10</a>
+					<a href="#" class="subsections__pagination-item">58</a>
+				</div>
+			</div>
+			<div class="subsections__block" id="block__many">
+				<div class="report__select-fast_block">
+					<div class="report__select-fast_item">
+						<span>Игроки</span>
+						<select>
+							<option value="">1000</option>
+							<option value="">1000</option>
+							<option value="">1000</option>
+						</select>
+					</div>
+					<div class="report__select-fast_item">
+						<span>Победители 1 круга</span>
+						<select>
+							<option value="">1</option>
+							<option value="">1</option>
+							<option value="">1</option>
+						</select>
+					</div>
+				</div>
+				<div class="report__search">
+					<input type="search" name="search" value="" placeholder="Поиск" class="report__search_input">
+					<button type="" class="report__search_button">Найти</button>
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th>Тип</th>
+							<th>№</th>
+							<th>Ставка $</th>
+							<th> Столы</th>
+							<th> Мест</th>
+							<th> Выйгрыш $</th>
+							<th> Проигрыш $</th>
+							<th> Сальдо $</th>
+							<th> Дата начала</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr onclick="window.location.href='bots-long-game.html'; return false" style="cursor: pointer;">
+							<td>100 / 1 000</td>
+							<td>49330</td>
+							<td>50</td>
+							<td>10</td>
+							<td>4</td>
+							<td >9 000</td>
+							<td>2 000</td>
+							<td>9 000</td>
+							<td>01.02.2016</td>
+						</tr>
+						<tr >
+							<td>10k / 100k</td>
+							<td>43111</td>
+							<td>50</td>
+							<td>2</td>
+							<td>3</td>
+							<td  ></td>
+							<td>300</td>
+							<td>- 300</td>
+							<td>01.02.2016</td>
+						</tr>
+						<tr >
+							<td>100 / 1 000</td>
+							<td>94883</td>
+							<td>100</td>
+							<td>1</td>
+							<td>8</td>
+							<td  >90 000</td>
+							<td>800</td>
+							<td>90 000</td>
+							<td>27.01.2016</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="button-block">
+					<a href="#" title="" class="subsections__button">Показать больше</a>
+				</div>
+				<div class="subsections__pagination">
+					<a href="#" class="subsections__pagination-item">1</a>
+					<a href="#" class="subsections__pagination-item">2</a>
+					<a href="#" class="subsections__pagination-item">3</a>
+					<a href="#" class="subsections__pagination-item">4</a>
+					<a href="#" class="subsections__pagination-item">5</a>
+					<a href="#" class="subsections__pagination-item">6</a>
+					<a href="#" class="subsections__pagination-item">7</a>
+					<a href="#" class="subsections__pagination-item">8</a>
+					<a href="#" class="subsections__pagination-item">9</a>
+					<a href="#" class="subsections__pagination-item">10</a>
+					<a href="#" class="subsections__pagination-item">58</a>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

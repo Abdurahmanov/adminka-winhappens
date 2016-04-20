@@ -4,33 +4,35 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
+	<link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css ">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/jquery.datetimepicker.css">
 	<script src="js/jquery.js" type="text/javascript"></script>
 	<script src="js/jquery.datetimepicker.full.min.js" type="text/javascript"></script>
 	<script src="js/common.js" type="text/javascript"></script>
+	<script src="js/fancybox/source/jquery.fancybox.js"></script>
 </head>
 <body>
 	<div class="wrapper">
 		<div class="menu">
-			<a href="#" title="" class="menu__item menu__item_active">
+			<a href="main.html" title="" class="menu__item menu__item_active">
 				<span>Главная</span>
 			</a>
-			<a href="#" title="" class="menu__item">
+			<a href="finance.html" title="" class="menu__item">
 				<span>Финансы</span>
 			</a>
-			<a href="#" title="" class="menu__item">
+			<a href="players.html" title="" class="menu__item">
 				<span>Игроки</span>
 			</a>
-			<a href="#" title="" class="menu__item">
+			<a href="bots.html" title="" class="menu__item">
 				<span>Боты</span>
 			</a>
-			<a href="#" title="" class="menu__item">
+			<a href="help.html" title="" class="menu__item">
 				<span>Служба поддержки</span>
 			</a>
-			<a href="#" title="" class="menu__item">
+			<a href="games-short.html" title="" class="menu__item">
 				<span>Турниры</span>
-				<span class="show-more">+</span>
+				<span class="show-more modalbox" onclick="window.location.href='#new-tournament';" style="cursor: pointer;">+</span>
 			</a>
 		</div>
 		<section>
@@ -259,6 +261,142 @@
 		</section>
 	</div>
 
+<!-- modals -->
 
+	<div id="new-tournament" class="modal">
+		<a href="javascript:;" class="modal-close">Закрыть окно</a>
+		<span class="modal-title">Новый турнир</span>
+		<div class="modal__line"></div>
+		<div class="modal-blocks ">
+			<div class="modal-block">
+				<div class="modal-block__title">
+					1. Участники:
+				</div>
+				<div class="modal-block__buttons">
+					<a href="" class="modal-block__button">2</a>
+					<a href="" class="modal-block__button">10</a>
+					<a href="" class="modal-block__button">100</a>
+					<a href="" class="modal-block__button modal-block__button_active">1000</a>
+					<a href="" class="modal-block__button ">10 k</a>
+					<a href="" class="modal-block__button ">100 k</a>
+					<a href="" class="modal-block__button ">1 m</a>
+				</div>
+			</div>
+			<div class="modal-block">
+				<div class="modal-block__title">
+					2. Победители в первом круге:
+				</div>
+				<div class="modal-block__buttons">
+					<a href="" class="modal-block__button">1</a>
+					<a href="" class="modal-block__button modal-block__button_active">3</a>
+					<a href="" class="modal-block__button ">5</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal__line"></div>
+		<div class="modal-blocks ">
+			<div class="modal-block">
+				<div class="modal-block__title">
+					3. Ставка:
+				</div>
+				<div class="modal-block__value">
+					5 $
+				</div>
+				<div class="modal-block__buttons">
+					<a href="" class="modal-block__button">0.1</a>
+					<a href="" class="modal-block__button">0.5</a>
+					<a href="" class="modal-block__button">1</a>
+					<a href="" class="modal-block__button modal-block__button_active">5</a>
+				</div>
+			</div>
+			<div class="modal-block">
+				<div class="modal-block__title">
+					4. Рейк:
+				</div>
+				<div class="modal-block__value">
+					10 %
+				</div>
+				<div class="modal-block__value-result">
+					500 $
+				</div>
+				<div class="modal-block__buttons">
+					<a href="" class="modal-block__button modal-block__button_active">10</a>
+					<a href="" class="modal-block__button">5</a>
+					<a href="" class="modal-block__button">2,5</a>
+					<a href="" class="modal-block__button ">1</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal__line"></div>
+		<div class="modal-blocks ">
+			<div class="modal-block">
+				<div class="modal-block__title">
+					5. Выйгрыш
+				</div>
+				<div class="modal-block__input modal-block__input_error">
+					<div class="modal-block__round modal-block__round_error">1</div>
+					<label for="200">200 x</label>
+					<input type="text" name="" value="4$" placeholder="" id="200">
+					<input type="text" name="" value="800$" placeholder="" >
+					<div class="modal-block__message-error">
+						200 $
+					</div>
+				</div>
+				<div class="modal-block__input ">
+					<div class="modal-block__round modal-block__round_success">1</div>
+					<label for="200">100 x</label>
+					<input type="text" name="" value="10$" placeholder="" id="200">
+					<input type="text" name="" value="1000$" placeholder="" >
+				</div>
+				<div class="modal-block__input ">
+					<div class="modal-block__round modal-block__round_success">2</div>
+					<label for="200">10 x</label>
+					<input type="text" name="" value="100$" placeholder="" id="200">
+					<input type="text" name="" value="1000$" placeholder="" >
+				</div>
+				<div class="modal-block__input ">
+					<div class="modal-block__round modal-block__round_success">Финал</div>
+					<label for="200">1 x</label>
+					<input type="text" name="" value="1500$" placeholder="" id="200">
+					<input type="text" name="" value="1500$" placeholder="" >
+				</div>
+			</div>
+			<div class="modal-block">
+				<div class="modal-block__title">
+					6. Призы
+				</div>
+				<div class="modal-block__texts">
+					<div class="modal-block__winners">
+						<div class="modal-block__texts-description">Призовой фонд -</div>
+						<div class="modal-block__texts-title"> $ 4 500</div>
+					</div>
+					<div class="modal-block__winners">
+						<div class="modal-block__texts-description">Победители -</div>
+						<div class="modal-block__texts-title"> 300</div>
+					</div>
+					<div class="modal-block__prize">
+						<div class="modal-block__texts-description">1 место</div>
+						<div class="modal-block__texts-title"> $ 1610</div>
+					</div>
+					<div class="modal-block__prize">
+						<div class="modal-block__texts-description">12-10 место</div>
+						<div class="modal-block__texts-title"> $ 110</div>
+					</div>
+					<div class="modal-block__prize">
+						<div class="modal-block__texts-description">11-100 место</div>
+						<div class="modal-block__texts-title"> $ 10</div>
+					</div>
+					<div class="modal-block__prize">
+						<div class="modal-block__texts-description">101-300 место</div>
+						<div class="modal-block__texts-title"> 5 $</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal__line"></div>
+		<div class="modal__submit">
+			<input type="submit" name="" value="Создать турнир">
+		</div>
+	</div>
 </body>
 </html>
